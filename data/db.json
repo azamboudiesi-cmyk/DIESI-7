@@ -1,0 +1,888 @@
+{
+  "users": [
+    {
+      "id": "usr_demo_01",
+      "name": "Alexandre Dupont",
+      "email": "alex@techinterviews.io",
+      "passwordHash": "1f855c5055e61d3d10d7b88a0f4851e09b03d0e35c647378cc486c1ff0f1ce8a",
+      "createdAt": "2026-08-15T10:00:00.000Z",
+      "targetDomain": "JavaScript",
+      "targetLevel": "Intermédiaire",
+      "role": "student",
+      "subscription": {
+        "status": "active",
+        "monthlyFee": 29,
+        "nextDueDate": "2026-10-31T23:59:59.000Z",
+        "lastPaymentDate": "2026-09-25T10:15:00.000Z",
+        "totalDeposited": 58
+      }
+    },
+    {
+      "id": "usr_1790512218946_lfh21",
+      "name": "Sophie Bernard",
+      "email": "sophie@test.fr",
+      "passwordHash": "1f855c5055e61d3d10d7b88a0f4851e09b03d0e35c647378cc486c1ff0f1ce8a",
+      "createdAt": "2026-09-27T12:30:18.946Z"
+    },
+    {
+      "id": "usr_1790513202139_z3guh",
+      "name": "Baby",
+      "email": "azamboudiesi@gmail.com",
+      "passwordHash": "4024c3a451781266cbee22126253d5be1e797198ddb1179c4801403932b0f301",
+      "createdAt": "2026-09-27T12:46:42.140Z"
+    },
+    {
+      "id": "usr_admin_01",
+      "name": "Responsable Pédagogique (Admin)",
+      "email": "admin@techinterviews.io",
+      "passwordHash": "1f855c5055e61d3d10d7b88a0f4851e09b03d0e35c647378cc486c1ff0f1ce8a",
+      "createdAt": "2026-08-01T09:00:00.000Z",
+      "role": "admin"
+    },
+    {
+      "id": "usr_student_02",
+      "name": "Sarah Connor",
+      "email": "sarah.connor@gmail.com",
+      "passwordHash": "1f855c5055e61d3d10d7b88a0f4851e09b03d0e35c647378cc486c1ff0f1ce8a",
+      "createdAt": "2026-09-01T14:20:00.000Z",
+      "targetDomain": "Bases de données",
+      "targetLevel": "Intermédiaire",
+      "role": "student",
+      "subscription": {
+        "status": "active",
+        "monthlyFee": 29,
+        "nextDueDate": "2026-10-31T23:59:59.000Z",
+        "lastPaymentDate": "2026-09-26T16:30:00.000Z",
+        "totalDeposited": 29
+      }
+    },
+    {
+      "id": "usr_student_03",
+      "name": "Mamadou Traoré",
+      "email": "mamadou.traore@ecole-tech.org",
+      "passwordHash": "1f855c5055e61d3d10d7b88a0f4851e09b03d0e35c647378cc486c1ff0f1ce8a",
+      "createdAt": "2026-09-18T08:45:00.000Z",
+      "targetDomain": "Python",
+      "targetLevel": "Débutant",
+      "role": "student",
+      "subscription": {
+        "status": "active",
+        "monthlyFee": 29,
+        "nextDueDate": "2026-10-31T23:59:59.000Z",
+        "lastPaymentDate": "2026-09-20T11:00:00.000Z",
+        "totalDeposited": 29
+      }
+    },
+    {
+      "id": "usr_1790515094345_et8lu",
+      "name": "Jean Dupont",
+      "email": "jean.dupont@test.com",
+      "passwordHash": "1f855c5055e61d3d10d7b88a0f4851e09b03d0e35c647378cc486c1ff0f1ce8a",
+      "createdAt": "2026-09-27T13:18:14.345Z",
+      "targetDomain": "Bases de données",
+      "targetLevel": "Intermédiaire",
+      "role": "student",
+      "subscription": {
+        "status": "active",
+        "monthlyFee": 29,
+        "nextDueDate": "2026-10-27T13:18:20.193Z",
+        "totalDeposited": 29,
+        "lastPaymentDate": "2026-09-27T13:18:20.193Z"
+      }
+    }
+  ],
+  "interviews": [
+    {
+      "id": "int_demo_01",
+      "userId": "usr_demo_01",
+      "domain": "JavaScript",
+      "level": "Intermédiaire",
+      "mode": "Simulation",
+      "questionCount": 5,
+      "globalScore": 78,
+      "createdAt": "2026-09-10T14:30:00.000Z",
+      "completedAt": "2026-09-10T14:48:00.000Z",
+      "questions": [
+        {
+          "id": "q_js_1",
+          "orderIndex": 0,
+          "question": "Expliquez la différence entre `var`, `let` et `const` en JavaScript, en détaillant la portée et le hoisting.",
+          "expectedTopics": [
+            "Portée de bloc",
+            "Portée de fonction",
+            "Hoisting",
+            "Temporal Dead Zone",
+            "Réassignation"
+          ],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "q_js_2",
+          "orderIndex": 1,
+          "question": "Comment fonctionne l'Event Loop en JavaScript ? Quelle est la différence entre les microtâches et les macrotâches ?",
+          "expectedTopics": [
+            "Call Stack",
+            "Callback Queue",
+            "Microtask Queue",
+            "Promise vs setTimeout",
+            "Render Queue"
+          ],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "q_js_3",
+          "orderIndex": 2,
+          "question": "Qu'est-ce qu'une closure (fermeture) et dans quel cas concret l'utiliseriez-vous ?",
+          "expectedTopics": [
+            "Lexical scoping",
+            "Encapsulation",
+            "Factory functions",
+            "Mémoire / Fuites"
+          ],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "q_js_4",
+          "orderIndex": 3,
+          "question": "Expliquez comment fonctionne le chaînage d'erreurs avec `async/await` et `Promise.allSettled` vs `Promise.all`.",
+          "expectedTopics": [
+            "Try / catch",
+            "Fail fast",
+            "Résilience",
+            "Gestion concurrente"
+          ],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "q_js_5",
+          "orderIndex": 4,
+          "question": "Quelle est la différence entre `==` et `===` ? Donnez un exemple de coercion de type inattendue.",
+          "expectedTopics": [
+            "Strict equality",
+            "Type coercion",
+            "Algorithme ToPrimitive",
+            "Truthy/Falsy"
+          ],
+          "difficulty": "beginner"
+        }
+      ],
+      "answers": [
+        {
+          "id": "ans_js_1",
+          "questionId": "q_js_1",
+          "userAnswer": "`var` a une portée de fonction et est hissé avec la valeur undefined. `let` et `const` ont une portée de bloc ({}) et sont dans une Temporal Dead Zone jusqu'à leur déclaration. `const` empêche la réassignation de la référence.",
+          "score": 90,
+          "strengths": [
+            "Bonne explication de la portée de bloc vs fonction",
+            "Mention pertinente de la Temporal Dead Zone"
+          ],
+          "weaknesses": [
+            "Aurait pu préciser que les objets sous `const` restent mutables"
+          ],
+          "feedback": "Excellente réponse, claire et synthétique. Les concepts clés de portée et de TDZ sont parfaitement compris.",
+          "improvementTips": [
+            "Précisez toujours la mutabilité interne des objets déclarés avec `const`."
+          ],
+          "createdAt": "2026-09-10T14:34:00.000Z"
+        },
+        {
+          "id": "ans_js_2",
+          "questionId": "q_js_2",
+          "userAnswer": "L'Event Loop coordonne la pile d'appels et les files d'attente. Quand la stack est vide, les microtâches comme les Promises sont traitées en priorité avant les macrotâches comme setTimeout.",
+          "score": 85,
+          "strengths": [
+            "Ordre d'exécution microtâches vs macrotâches bien identifié",
+            "Vocabulaire technique précis"
+          ],
+          "weaknesses": [
+            "Explication rapide de la phase de rendering"
+          ],
+          "feedback": "Très bonne compréhension du moteur asynchrone V8 et de la priorité accordée aux Promises.",
+          "improvementTips": [
+            "Mentionnez queueMicrotask() ou MutationObserver pour montrer une expertise avancée."
+          ],
+          "createdAt": "2026-09-10T14:38:00.000Z"
+        },
+        {
+          "id": "ans_js_3",
+          "questionId": "q_js_3",
+          "userAnswer": "Une closure est une fonction qui se souvient des variables de son environnement lexical même après l'exécution de la fonction parente. C'est utilisé pour créer des variables privées.",
+          "score": 80,
+          "strengths": [
+            "Définition exacte du scope lexical",
+            "Cas d'usage pertinent (état privé)"
+          ],
+          "weaknesses": [
+            "Manque d'un court exemple de code ou mention des risques de fuite mémoire"
+          ],
+          "feedback": "Bonne définition théorique. Illustrer avec un compteur ou un module pattern aurait été parfait.",
+          "improvementTips": [
+            "Donnez un exemple concret d'implémentation (ex: currying, createCounter)."
+          ],
+          "createdAt": "2026-09-10T14:41:00.000Z"
+        },
+        {
+          "id": "ans_js_4",
+          "questionId": "q_js_4",
+          "userAnswer": "Promise.all échoue dès qu'une promesse est rejetée, alors que allSettled attend que toutes soient terminées, avec leur status et reason.",
+          "score": 75,
+          "strengths": [
+            "Différence fail-fast vs all-settled bien comprise"
+          ],
+          "weaknesses": [
+            "La gestion des blocs try/catch autour de plusieurs await n'a pas été suffisamment détaillée"
+          ],
+          "feedback": "Bonne base sur les méthodes statiques de Promise, mais un peu succinct sur le pattern try/catch structuré.",
+          "improvementTips": [
+            "Expliquez comment manipuler le tableau d'objets {status, value, reason} retourné par allSettled."
+          ],
+          "createdAt": "2026-09-10T14:44:00.000Z"
+        },
+        {
+          "id": "ans_js_5",
+          "questionId": "q_js_5",
+          "userAnswer": "`===` vérifie la valeur et le type, tandis que `==` convertit les types avant de comparer. Par exemple `0 == \"\"` ou `null == undefined`.",
+          "score": 70,
+          "strengths": [
+            "Exemples classiques de coercion"
+          ],
+          "weaknesses": [
+            "Explication un peu brève sur les règles de coercion abstraite"
+          ],
+          "feedback": "Correct et direct. Maîtriser le tableau de coercion aide beaucoup en entretien.",
+          "improvementTips": [
+            "Expliquez pourquoi Object.is() est parfois préféré pour NaN et -0."
+          ],
+          "createdAt": "2026-09-10T14:47:00.000Z"
+        }
+      ],
+      "summary": {
+        "overallStrengths": [
+          "Excellente maîtrise du hoisting et de la boucle d'événements",
+          "Vocabulaire JavaScript moderne"
+        ],
+        "overallWeaknesses": [
+          "Détail des cas limites en gestion d'erreurs asynchrones",
+          "Exemples de code plus concrets attendus"
+        ],
+        "recommendations": [
+          "Pratiquer la manipulation avancée de Promise.allSettled et concevoir des retry patterns."
+        ]
+      }
+    },
+    {
+      "id": "int_demo_02",
+      "userId": "usr_demo_01",
+      "domain": "Développement Web",
+      "level": "Débutant",
+      "mode": "Entraînement",
+      "questionCount": 5,
+      "globalScore": 88,
+      "createdAt": "2026-09-15T09:15:00.000Z",
+      "completedAt": "2026-09-15T09:35:00.000Z",
+      "questions": [
+        {
+          "id": "q_web_1",
+          "orderIndex": 0,
+          "question": "Quelle est la différence fondamentale entre les éléments HTML `inline` et `block` ?",
+          "expectedTopics": [
+            "Flux normal",
+            "Largeur 100% vs contenu",
+            "Marges et padding"
+          ],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "q_web_2",
+          "orderIndex": 1,
+          "question": "Comment rendre un site web accessible (a11y) pour les utilisateurs de lecteurs d'écran ?",
+          "expectedTopics": [
+            "HTML sémantique",
+            "Balises alt",
+            "Attributs ARIA",
+            "Navigation clavier",
+            "Contraste des couleurs"
+          ],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "q_web_3",
+          "orderIndex": 2,
+          "question": "Quels sont les principaux verbes HTTP dans une API REST et leur sémantique ?",
+          "expectedTopics": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE",
+            "Idempotence"
+          ],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "q_web_4",
+          "orderIndex": 3,
+          "question": "Expliquez ce qu'est le LocalStorage vs SessionStorage vs Cookies.",
+          "expectedTopics": [
+            "Persistance",
+            "Taille maximale",
+            "Transmission serveur HTTP",
+            "Scope onglet/navigateur"
+          ],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "q_web_5",
+          "orderIndex": 4,
+          "question": "Qu'est-ce que le Responsive Design et comment les Media Queries fonctionnent-elles ?",
+          "expectedTopics": [
+            "Viewport meta tag",
+            "Breakpoints",
+            "Mobile-first",
+            "CSS flexible"
+          ],
+          "difficulty": "beginner"
+        }
+      ],
+      "answers": [
+        {
+          "id": "ans_web_1",
+          "questionId": "q_web_1",
+          "userAnswer": "Un élément block (comme div, p) prend toute la largeur disponible et commence sur une nouvelle ligne. Un élément inline (comme span, a) ne prend que la largeur de son contenu.",
+          "score": 95,
+          "strengths": [
+            "Distinction limpide",
+            "Exemples pertinents"
+          ],
+          "weaknesses": [],
+          "feedback": "Parfait. C'est la réponse idéale pour un entretien débutant.",
+          "improvementTips": [
+            "Mentionnez aussi `inline-block` pour montrer une vision exhaustive."
+          ],
+          "createdAt": "2026-09-15T09:18:00.000Z"
+        },
+        {
+          "id": "ans_web_2",
+          "questionId": "q_web_2",
+          "userAnswer": "Utiliser des balises sémantiques (header, nav, main, footer), renseigner les textes alt sur les images, assurer un bon contraste de couleurs et tester la navigation au clavier avec Tab.",
+          "score": 90,
+          "strengths": [
+            "Approche sémantique prioritaire",
+            "Prise en compte de la navigation clavier"
+          ],
+          "weaknesses": [
+            "Peu de détails sur les rôles ARIA"
+          ],
+          "feedback": "Très solide. L'accessibilité est souvent négligée, cette réponse fait une excellente impression.",
+          "improvementTips": [
+            "Citez la règle de base ARIA : \"Le meilleur ARIA est le HTML sémantique natif\"."
+          ],
+          "createdAt": "2026-09-15T09:22:00.000Z"
+        },
+        {
+          "id": "ans_web_3",
+          "questionId": "q_web_3",
+          "userAnswer": "GET pour lire des données, POST pour créer, PUT pour remplacer complètement une ressource, PATCH pour modifier partiellement, et DELETE pour supprimer.",
+          "score": 92,
+          "strengths": [
+            "Différence PUT vs PATCH bien précisée",
+            "Excellente clarté"
+          ],
+          "weaknesses": [
+            "Idempotence non mentionnée explicitement"
+          ],
+          "feedback": "Excellente maîtrise des standards RESTful.",
+          "improvementTips": [
+            "Mentionnez que GET, PUT et DELETE sont idempotents, tandis que POST ne l'est pas."
+          ],
+          "createdAt": "2026-09-15T09:26:00.000Z"
+        },
+        {
+          "id": "ans_web_4",
+          "questionId": "q_web_4",
+          "userAnswer": "LocalStorage persiste même si on ferme le navigateur (~5Mo). SessionStorage s'efface à la fermeture de l'onglet. Les cookies sont envoyés au serveur avec chaque requête HTTP et sont plus petits (~4Ko).",
+          "score": 88,
+          "strengths": [
+            "Limites de taille et durée de vie précisées",
+            "Rôle des cookies dans les requêtes HTTP"
+          ],
+          "weaknesses": [
+            "Attributs de sécurité des cookies (HttpOnly, Secure, SameSite) omis"
+          ],
+          "feedback": "Très bonne comparaison. Les différences fonctionnelles sont parfaitement maîtrisées.",
+          "improvementTips": [
+            "Abordez la sécurité : cookie HttpOnly pour se protéger des failles XSS."
+          ],
+          "createdAt": "2026-09-15T09:30:00.000Z"
+        },
+        {
+          "id": "ans_web_5",
+          "questionId": "q_web_5",
+          "userAnswer": "Le responsive design adapte l'affichage aux différentes tailles d'écran via la balise meta viewport et les media queries (@media screen and (min-width: 768px)). On privilégie souvent le Mobile First.",
+          "score": 85,
+          "strengths": [
+            "Mention de Mobile-First et de la balise viewport"
+          ],
+          "weaknesses": [
+            "Exemple de syntaxe basique"
+          ],
+          "feedback": "Très bonne réponse, pratique et moderne.",
+          "improvementTips": [
+            "Mentionnez les unités relatives comme rem, vw, et vh pour une flexibilité optimale."
+          ],
+          "createdAt": "2026-09-15T09:34:00.000Z"
+        }
+      ],
+      "summary": {
+        "overallStrengths": [
+          "Très grande clarté sur les bases du Web",
+          "Sensibilité aux bonnes pratiques (a11y, REST)"
+        ],
+        "overallWeaknesses": [
+          "Sécurité des cookies et spécificités protocolaires"
+        ],
+        "recommendations": [
+          "Passer au niveau Intermédiaire en Développement Web pour explorer le rendu SSR, l'hydratation et les Web Workers."
+        ]
+      }
+    },
+    {
+      "id": "int_demo_03",
+      "userId": "usr_demo_01",
+      "domain": "Bases de données",
+      "level": "Intermédiaire",
+      "mode": "Simulation",
+      "questionCount": 5,
+      "globalScore": 72,
+      "createdAt": "2026-09-22T16:00:00.000Z",
+      "completedAt": "2026-09-22T16:20:00.000Z",
+      "questions": [
+        {
+          "id": "q_db_1",
+          "orderIndex": 0,
+          "question": "Que signifie l'acronyme ACID dans le contexte des bases de données relationnelles ?",
+          "expectedTopics": [
+            "Atomicité",
+            "Cohérence",
+            "Isolation",
+            "Durabilité"
+          ],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "q_db_2",
+          "orderIndex": 1,
+          "question": "Comment fonctionne un index B-Tree et quand peut-il ralentir les performances ?",
+          "expectedTopics": [
+            "Arbre équilibré",
+            "Recherche O(log n)",
+            "Coût en écriture (INSERT/UPDATE)",
+            "Sélectivité"
+          ],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "q_db_3",
+          "orderIndex": 2,
+          "question": "Quelle est la différence entre une jointure INNER JOIN, LEFT JOIN et FULL OUTER JOIN ?",
+          "expectedTopics": [
+            "Intersection",
+            "Préservation des lignes de gauche",
+            "Gestion des valeurs NULL"
+          ],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "q_db_4",
+          "orderIndex": 3,
+          "question": "Expliquez ce qu'est le problème N+1 requêtes dans un ORM et comment le résoudre.",
+          "expectedTopics": [
+            "Lazy loading",
+            "Eager loading / JOIN FETCH",
+            "Impact réseau",
+            "Batching"
+          ],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "q_db_5",
+          "orderIndex": 4,
+          "question": "Qu'est-ce que le sharding et en quoi diffère-t-il de la réplication Read-Replica ?",
+          "expectedTopics": [
+            "Partitionnement horizontal",
+            "Distribution des écritures",
+            "Scalabilité en lecture"
+          ],
+          "difficulty": "advanced"
+        }
+      ],
+      "answers": [
+        {
+          "id": "ans_db_1",
+          "questionId": "q_db_1",
+          "userAnswer": "Atomicité : tout ou rien. Cohérence : respect des contraintes d'intégrité. Isolation : transactions indépendantes. Durabilité : les données confirmées ne sont pas perdues même en cas de crash.",
+          "score": 88,
+          "strengths": [
+            "Définition exacte de chaque lettre",
+            "Excellente concision"
+          ],
+          "weaknesses": [
+            "Niveaux d'isolation (Read Committed, Serializable) non évoqués"
+          ],
+          "feedback": "Très bonne réponse théorique sur les transactions relationnelles.",
+          "improvementTips": [
+            "Mentionnez les anomalies d'isolation (Dirty Read, Non-repeatable read, Phantom read)."
+          ],
+          "createdAt": "2026-09-22T16:04:00.000Z"
+        },
+        {
+          "id": "ans_db_2",
+          "questionId": "q_db_2",
+          "userAnswer": "Un index B-tree organise les clés dans un arbre pour chercher rapidement en O(log N). Il ralentit les écritures (INSERT/UPDATE/DELETE) car l'arbre doit être rééquilibré.",
+          "score": 82,
+          "strengths": [
+            "Complexité O(log N) mentionnée",
+            "Impact négatif sur les écritures bien identifié"
+          ],
+          "weaknesses": [
+            "Notion de sélectivité de colonne non abordée"
+          ],
+          "feedback": "Bonne compréhension du compromis lecture/écriture sur les index.",
+          "improvementTips": [
+            "Rappelez qu'un index sur une colonne peu discriminante (ex: booléen) est souvent inefficace."
+          ],
+          "createdAt": "2026-09-22T16:08:00.000Z"
+        },
+        {
+          "id": "ans_db_3",
+          "questionId": "q_db_3",
+          "userAnswer": "INNER JOIN garde seulement les correspondances. LEFT JOIN garde toutes les lignes de la table de gauche même sans correspondance (avec des NULL à droite). FULL OUTER JOIN garde toutes les lignes des deux tables.",
+          "score": 90,
+          "strengths": [
+            "Explication claire et directe des types de jointures"
+          ],
+          "weaknesses": [],
+          "feedback": "Impeccable.",
+          "improvementTips": [
+            "Mentionnez l'utilisation de RIGHT JOIN ou de CROSS JOIN pour compléter."
+          ],
+          "createdAt": "2026-09-22T16:11:00.000Z"
+        },
+        {
+          "id": "ans_db_4",
+          "questionId": "q_db_4",
+          "userAnswer": "C'est quand l'ORM fait 1 requête pour la liste parente puis 1 requête par enfant. Ça fait beaucoup d'appels.",
+          "score": 60,
+          "strengths": [
+            "Identification du problème de requêtes multiples"
+          ],
+          "weaknesses": [
+            "Aucune solution technique proposée (eager loading, join fetch, prefetch)"
+          ],
+          "feedback": "Le problème est reconnu, mais la solution en pratique manquait dans la réponse.",
+          "improvementTips": [
+            "Expliquez comment résoudre avec `includes` en Prisma, `prefetch_related` en Django ou `JOIN FETCH` en SQL."
+          ],
+          "createdAt": "2026-09-22T16:15:00.000Z"
+        },
+        {
+          "id": "ans_db_5",
+          "questionId": "q_db_5",
+          "userAnswer": "La réplication copie la base sur des serveurs secondaires pour lire. Le sharding divise les données selon une clé sur plusieurs bases pour encaisser plus de requêtes.",
+          "score": 65,
+          "strengths": [
+            "Distinction lecture (replicas) vs partitionnement (sharding)"
+          ],
+          "weaknesses": [
+            "Explications sommaires sur la complexité des transactions distribuées"
+          ],
+          "feedback": "Bonne intuition générale pour une question avancée.",
+          "improvementTips": [
+            "Expliquez la difficulté des jointures cross-shard et le choix de la clé de sharding (Shard Key)."
+          ],
+          "createdAt": "2026-09-22T16:19:00.000Z"
+        }
+      ],
+      "summary": {
+        "overallStrengths": [
+          "Excellentes bases SQL et compréhension des index",
+          "Compréhension du cycle de vie des transactions ACID"
+        ],
+        "overallWeaknesses": [
+          "Optimisation d'ORM (problème N+1) et architectures de scalabilité distribuée"
+        ],
+        "recommendations": [
+          "Réviser l'eager loading avec les ORM modernes et approfondir les mécanismes de Sharding vs Réplication."
+        ]
+      }
+    },
+    {
+      "id": "int_1790512222468_soek1",
+      "userId": "usr_1790512218946_lfh21",
+      "domain": "Python",
+      "level": "Débutant",
+      "mode": "Entraînement",
+      "questionCount": 1,
+      "globalScore": 95,
+      "createdAt": "2026-09-27T12:30:22.468Z",
+      "completedAt": "2026-09-27T12:30:22.468Z",
+      "questions": [
+        {
+          "id": "q1",
+          "orderIndex": 0,
+          "question": "Différence entre liste et tuple ?",
+          "expectedTopics": [
+            "Mutabilité"
+          ],
+          "difficulty": "beginner"
+        }
+      ],
+      "answers": [
+        {
+          "id": "ans_1790512222468_0",
+          "questionId": "q1",
+          "userAnswer": "Les listes sont mutables et les tuples immutables.",
+          "score": 95,
+          "strengths": [
+            "Bonne distinction"
+          ],
+          "weaknesses": [],
+          "feedback": "Parfait",
+          "improvementTips": [
+            "Parler de performance"
+          ],
+          "createdAt": "2026-09-27T12:30:22.468Z"
+        }
+      ],
+      "summary": {
+        "overallStrengths": [
+          "Bonne distinction"
+        ],
+        "overallWeaknesses": [],
+        "recommendations": [
+          "Parler de performance"
+        ]
+      }
+    }
+  ],
+  "favorites": [
+    {
+      "id": "fav_01",
+      "userId": "usr_demo_01",
+      "questionId": "q_js_2",
+      "domain": "JavaScript",
+      "level": "Intermédiaire",
+      "question": "Comment fonctionne l'Event Loop en JavaScript ? Quelle est la différence entre les microtâches et les macrotâches ?",
+      "expectedTopics": [
+        "Call Stack",
+        "Callback Queue",
+        "Microtask Queue",
+        "Promise vs setTimeout",
+        "Render Queue"
+      ],
+      "createdAt": "2026-09-10T14:50:00.000Z",
+      "notes": "Question classique en entretien frontend / fullstack. À réviser avant tout entretien technique !"
+    },
+    {
+      "id": "fav_02",
+      "userId": "usr_demo_01",
+      "questionId": "q_db_4",
+      "domain": "Bases de données",
+      "level": "Intermédiaire",
+      "question": "Expliquez ce qu'est le problème N+1 requêtes dans un ORM et comment le résoudre.",
+      "expectedTopics": [
+        "Lazy loading",
+        "Eager loading / JOIN FETCH",
+        "Impact réseau",
+        "Batching"
+      ],
+      "createdAt": "2026-09-22T16:25:00.000Z",
+      "notes": "Revoir la syntaxe des include/select en ORM pour éliminer les requêtes superflues."
+    },
+    {
+      "id": "fav_1790512231644_41ff",
+      "userId": "usr_1790512218946_lfh21",
+      "questionId": "q1",
+      "domain": "Python",
+      "level": "Débutant",
+      "question": "Différence entre liste et tuple ?",
+      "expectedTopics": [],
+      "createdAt": "2026-09-27T12:30:31.644Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx_1790515100193_otuz",
+      "userId": "usr_1790515094345_et8lu",
+      "userName": "Jean Dupont",
+      "userEmail": "jean.dupont@test.com",
+      "type": "INCOME",
+      "amount": 29,
+      "currency": "€",
+      "category": "Cotisation mensuelle cours",
+      "paymentMethod": "Mobile Money",
+      "status": "COMPLETED",
+      "description": "Paiement cours Bases de données - Fin de mois",
+      "date": "2026-09-27T13:18:20.193Z"
+    },
+    {
+      "id": "tx_01",
+      "userId": "usr_demo_01",
+      "userName": "Alexandre Dupont",
+      "userEmail": "alex@techinterviews.io",
+      "type": "INCOME",
+      "amount": 29,
+      "currency": "€",
+      "category": "Cotisation mensuelle cours",
+      "paymentMethod": "Carte Bancaire",
+      "status": "COMPLETED",
+      "description": "Paiement mensuel cours - Domaine JavaScript",
+      "date": "2026-08-25T10:15:00.000Z"
+    },
+    {
+      "id": "tx_02",
+      "userId": "usr_demo_01",
+      "userName": "Alexandre Dupont",
+      "userEmail": "alex@techinterviews.io",
+      "type": "INCOME",
+      "amount": 29,
+      "currency": "€",
+      "category": "Cotisation mensuelle cours",
+      "paymentMethod": "Carte Bancaire",
+      "status": "COMPLETED",
+      "description": "Renouvellement mensuel cours - Septembre",
+      "date": "2026-09-25T10:15:00.000Z"
+    },
+    {
+      "id": "tx_03",
+      "userId": "usr_student_02",
+      "userName": "Sarah Connor",
+      "userEmail": "sarah.connor@gmail.com",
+      "type": "INCOME",
+      "amount": 29,
+      "currency": "€",
+      "category": "Cotisation mensuelle cours",
+      "paymentMethod": "Mobile Money",
+      "status": "COMPLETED",
+      "description": "Paiement cours - Domaine Bases de données",
+      "date": "2026-09-26T16:30:00.000Z"
+    },
+    {
+      "id": "tx_04",
+      "userId": "usr_student_03",
+      "userName": "Mamadou Traoré",
+      "userEmail": "mamadou.traore@ecole-tech.org",
+      "type": "INCOME",
+      "amount": 29,
+      "currency": "€",
+      "category": "Cotisation mensuelle cours",
+      "paymentMethod": "Carte Bancaire",
+      "status": "COMPLETED",
+      "description": "Paiement cours - Domaine Python (Débutant)",
+      "date": "2026-09-20T11:00:00.000Z"
+    },
+    {
+      "id": "tx_05",
+      "userId": "usr_admin_01",
+      "userName": "Administration TechInterviews",
+      "userEmail": "admin@techinterviews.io",
+      "type": "EXPENSE",
+      "amount": 32,
+      "currency": "€",
+      "category": "Hébergement & Serveurs Cloud",
+      "paymentMethod": "Virement Bancaire",
+      "status": "COMPLETED",
+      "description": "Serveurs d'exécution et stockage sécurisé",
+      "date": "2026-09-15T09:00:00.000Z"
+    },
+    {
+      "id": "tx_06",
+      "userId": "usr_admin_01",
+      "userName": "Administration TechInterviews",
+      "userEmail": "admin@techinterviews.io",
+      "type": "EXPENSE",
+      "amount": 15,
+      "currency": "€",
+      "category": "API IA Gemini",
+      "paymentMethod": "Carte Bancaire",
+      "status": "COMPLETED",
+      "description": "Consommation tokens évaluation et génération questions",
+      "date": "2026-09-22T14:00:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1790515100193_7626",
+      "type": "NEW_PAYMENT",
+      "title": "Paiement mensuel reçu",
+      "message": "Jean Dupont a déposé 29 € (Mobile Money) pour la poursuite de ses cours en Bases de données.",
+      "userId": "usr_1790515094345_et8lu",
+      "studentName": "Jean Dupont",
+      "domain": "Bases de données",
+      "level": "Intermédiaire",
+      "amount": 29,
+      "read": false,
+      "createdAt": "2026-09-27T13:18:20.193Z"
+    },
+    {
+      "id": "notif_1790515094345_u3e4",
+      "type": "NEW_REGISTRATION",
+      "title": "Nouvelle inscription étudiant",
+      "message": "Un étudiant vient de s'inscrire à TechInterview pour faire dans le domaine \"Bases de données\", il a choisi le niveau \"Intermédiaire\" : Jean Dupont (jean.dupont@test.com).",
+      "userId": "usr_1790515094345_et8lu",
+      "studentName": "Jean Dupont",
+      "domain": "Bases de données",
+      "level": "Intermédiaire",
+      "read": false,
+      "createdAt": "2026-09-27T13:18:14.345Z"
+    },
+    {
+      "id": "notif_01",
+      "type": "NEW_REGISTRATION",
+      "title": "Nouvelle inscription étudiant",
+      "message": "Un étudiant vient de s'inscrire à TechInterview : Sarah Connor (sarah.connor@gmail.com) pour faire dans le domaine des Bases de données, elle a choisi le niveau Intermédiaire.",
+      "userId": "usr_student_02",
+      "studentName": "Sarah Connor",
+      "domain": "Bases de données",
+      "level": "Intermédiaire",
+      "read": false,
+      "createdAt": "2026-09-26T16:25:00.000Z"
+    },
+    {
+      "id": "notif_02",
+      "type": "NEW_PAYMENT",
+      "title": "Paiement de cours reçu",
+      "message": "Sarah Connor a déposé 29 € via Mobile Money pour ses cours mensuels de Bases de données.",
+      "userId": "usr_student_02",
+      "studentName": "Sarah Connor",
+      "domain": "Bases de données",
+      "level": "Intermédiaire",
+      "amount": 29,
+      "read": false,
+      "createdAt": "2026-09-26T16:30:00.000Z"
+    },
+    {
+      "id": "notif_03",
+      "type": "NEW_REGISTRATION",
+      "title": "Nouvelle inscription étudiant",
+      "message": "Un étudiant vient de s'inscrire à TechInterview : Mamadou Traoré (mamadou.traore@ecole-tech.org) pour faire dans le domaine Python, il a choisi le niveau Débutant.",
+      "userId": "usr_student_03",
+      "studentName": "Mamadou Traoré",
+      "domain": "Python",
+      "level": "Débutant",
+      "read": true,
+      "createdAt": "2026-09-18T08:45:00.000Z"
+    },
+    {
+      "id": "notif_04",
+      "type": "NEW_PAYMENT",
+      "title": "Paiement mensuel reçu",
+      "message": "Alexandre Dupont a réglé sa cotisation mensuelle de 29 € (Carte Bancaire).",
+      "userId": "usr_demo_01",
+      "studentName": "Alexandre Dupont",
+      "amount": 29,
+      "read": true,
+      "createdAt": "2026-09-25T10:15:00.000Z"
+    }
+  ]
+}

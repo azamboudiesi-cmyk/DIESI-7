@@ -1,0 +1,6 @@
+{
+  "name": "TechInterviews",
+  "description": "Plateforme de simulation d'entretiens techniques propulsée par l'IA. Entraîne-toi avec des questions adaptatives, reçois une évaluation détaillée et suis ta progression.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

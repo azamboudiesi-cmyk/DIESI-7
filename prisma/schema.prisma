@@ -1,0 +1,126 @@
+// Prisma schema file for TechInterviews V2
+// Compatible with Vercel Postgres, Neon, Supabase, Cloud SQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String             @id @default(cuid())
+  name            String
+  email           String             @unique
+  passwordHash    String
+  role            String             @default("student") // "student" | "admin"
+  targetDomain    String?            // "Bases de données", "JavaScript", etc.
+  targetLevel     String?            // "Débutant", "Intermédiaire", "Avancé"
+  subscriptionStatus String          @default("trial")   // "active" | "trial" | "pending" | "expired"
+  monthlyFee      Float              @default(29.0)
+  totalDeposited  Float              @default(0.0)
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+  interviews      Interview[]
+  favorites       FavoriteQuestion[]
+  transactions    Transaction[]
+
+  @@map("users")
+}
+
+model Transaction {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type          String   // "INCOME" (Entrée) | "EXPENSE" (Sortie)
+  amount        Float
+  currency      String   @default("€")
+  category      String
+  paymentMethod String   // "Carte Bancaire" | "Mobile Money" | "Virement Bancaire"
+  status        String   @default("COMPLETED")
+  description   String
+  date          DateTime @default(now())
+
+  @@index([userId])
+  @@index([type])
+  @@map("transactions")
+}
+
+model AdminNotification {
+  id          String   @id @default(cuid())
+  type        String   // "NEW_REGISTRATION" | "NEW_PAYMENT"
+  title       String
+  message     String
+  userId      String?
+  studentName String?
+  domain      String?
+  level       String?
+  amount      Float?
+  read        Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@map("admin_notifications")
+}
+
+model Interview {
+  id            String     @id @default(cuid())
+  userId        String
+  user          User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  domain        String
+  level         String
+  mode          String     // "Entraînement" | "Simulation"
+  questionCount Int
+  globalScore   Int
+  createdAt     DateTime   @default(now())
+  completedAt   DateTime?
+  questions     Question[]
+
+  @@index([userId])
+  @@index([domain])
+  @@map("interviews")
+}
+
+model Question {
+  id             String             @id @default(cuid())
+  interviewId    String
+  interview      Interview          @relation(fields: [interviewId], references: [id], onDelete: Cascade)
+  orderIndex     Int
+  question       String
+  expectedTopics String[]
+  difficulty     String             // "beginner" | "intermediate" | "advanced"
+  answer         Answer?
+  favorites      FavoriteQuestion[]
+
+  @@index([interviewId])
+  @@map("questions")
+}
+
+model Answer {
+  id              String   @id @default(cuid())
+  questionId      String   @unique
+  question        Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  userAnswer      String
+  score           Int      // 0 - 100
+  feedback        String
+  strengths       String[]
+  weaknesses      String[]
+  improvementTips String[]
+  createdAt       DateTime @default(now())
+
+  @@map("answers")
+}
+
+model FavoriteQuestion {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+  notes      String?
+
+  @@unique([userId, questionId])
+  @@map("favorite_questions")
+}
